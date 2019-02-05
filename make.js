@@ -84,14 +84,14 @@ function prepareAssets() {
 
 function startDesktop() {
 	if (options.desktop) {
-		console.log("Building desktop client...")
 		console.log("Trying to start desktop client...")
 		const packageJSON = require('./buildSrc/electron-package-json-template.js')(
 			"",
 			"0.0.1",
 			"http://localhost:9000",
 			path.join(__dirname, "/resources/desktop-icons/logo-solo-red.png"),
-			false
+			false,
+			true
 		)
 		const content = JSON.stringify(packageJSON)
 		return fs.writeFileAsync("./build/package.json", content, 'utf-8')

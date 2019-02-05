@@ -7,13 +7,12 @@ import {
 	formatNameAndAddress,
 	fullNameToFirstAndLastName,
 	getCleanedMailAddress,
-	isMailAddress,
-	isRegularExpression,
 	mailAddressToFirstAndLastName,
 	parseBirthday,
 	parseDate,
 	stringToNameAndMailAddress
 } from "../../../src/misc/Formatter"
+import {isMailAddress, isRegularExpression,} from "../../../src/misc/FormatValidator"
 import {createBirthday} from "../../../src/api/entities/tutanota/Birthday"
 
 o.spec("FormatterTest", function () {
